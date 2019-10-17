@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6069D42358BDF8006B2083 /* PokeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */; };
 		3FBA918A2357618600679483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91892357618600679483 /* AppDelegate.swift */; };
 		3FBA918C2357618600679483 /* TestImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA918B2357618600679483 /* TestImageViewController.swift */; };
 		3FBA918F2357618600679483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA918D2357618600679483 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6069D12358BAC9006B2083 /* Singletons.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Singletons.md; sourceTree = "<group>"; };
+		3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeViewModelFactory.swift; sourceTree = "<group>"; };
 		3FBA91862357618600679483 /* The"OfFiCiAl"TerryCrewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The\"OfFiCiAl\"TerryCrewsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBA91892357618600679483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBA918B2357618600679483 /* TestImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +61,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6069D22358BDD6006B2083 /* ViewModel Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */,
+			);
+			path = "ViewModel Factory";
+			sourceTree = "<group>";
+		};
 		3FBA917D2357618600679483 = {
 			isa = PBXGroup;
 			children = (
+				3F6069D12358BAC9006B2083 /* Singletons.md */,
 				3FBA919B235761CF00679483 /* README.md */,
 				3FBA91882357618600679483 /* The"OfFiCiAl"TerryCrewsApp */,
 				3FBA91872357618600679483 /* Products */,
@@ -104,6 +116,7 @@
 		3FBA919F2357657900679483 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3F6069D22358BDD6006B2083 /* ViewModel Factory */,
 				3FBA91A02357658700679483 /* PokemonServiceViewModel.swift */,
 			);
 			path = ViewModels;
@@ -222,6 +235,7 @@
 				3FBA91BA23576D9500679483 /* PokeImageCollectionViewCell.swift in Sources */,
 				3FBA91B023576AF900679483 /* PokemonFileService.swift in Sources */,
 				3FBA918A2357618600679483 /* AppDelegate.swift in Sources */,
+				3F6069D42358BDF8006B2083 /* PokeViewModelFactory.swift in Sources */,
 				3FBA91A7235766FF00679483 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

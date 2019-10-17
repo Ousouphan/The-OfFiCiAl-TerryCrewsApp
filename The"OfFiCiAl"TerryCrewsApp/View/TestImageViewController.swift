@@ -21,7 +21,7 @@ extension UIView {
 
 class TestImageViewController: UIViewController {
 
-    var vm = PokemonServiceViewModel()
+    var vm: PokemonServiceViewModel!
     
     lazy var imageView: UIImageView = {
         let im = UIImageView(frame: .zero)

@@ -13,10 +13,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let factory = PokeViewModelFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // what is my first VC?
+        let vc = getFirstVC()
+        
+        self.window = self.window ?? UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func getFirstVC() -> UIViewController {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        
+        // do some logic, decide the first VC
+        if (Int.random(in: 0...1) == 0) {
+            let vc = main.instantiateViewController(withIdentifier: "TestImageViewController") as! TestImageViewController
+            // make a ViewModel for our ViewController
+            // from our Factory.
+            vc.vm = factory.buildPokeServiceVM()
+            return vc
+        }
+        else {
+            let vc = main.instantiateViewController(withIdentifier: "PokemonGalleryViewController") as! PokemonGalleryViewController
+            vc.vm = factory.buildPokeServiceVM()
+            return vc
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

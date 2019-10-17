@@ -16,11 +16,7 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     }
     var handler: (()->Void)?
     
-    let service: PokemonService
-    
-    init(_ service: PokemonService) {
-        self.service = service
-    }
+    let service = PokemonService.shared
     
     func bind(_ handler: @escaping () -> Void) {
         self.handler = handler

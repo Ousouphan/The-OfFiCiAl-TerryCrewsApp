@@ -20,12 +20,19 @@ import Foundation
 // Lambda Functions
 // Anonymous Functions
 
-
-class PokemonService: PokemonServiceProtocol {
+final class PokemonService: PokemonServiceProtocol {
     
-    let session = URLSession(configuration: .default)
-    let files = ImageFileService()
-    let cache = NSCache<NSString, NSData>()
+    let session: URLSession
+    let files: ImageFileService
+    let cache: NSCache<NSString, NSData>
+    
+    init(_ session: URLSession,
+         _ files: ImageFileService,
+         _ cache: NSCache<NSString, NSData>) {
+        self.session = session
+        self.files = files
+        self.cache = cache
+    }
     
     func downloadPokemon(_ query: String,
                          _ completion: @escaping PokeResponse) {

@@ -12,17 +12,19 @@ class PokemonGalleryViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var vm = PokemonServiceViewModel()
+    var vm: PokemonServiceViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         vm.bind {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
         }
+        
         vm.download("wailord")
         for _ in 0..<10 {
             vm.download("spheal")
@@ -52,4 +54,24 @@ extension PokemonGalleryViewController: UICollectionViewDataSource {
         return cell
     }
     
+}
+
+extension PokemonGalleryViewController: UICollectionViewDelegate {
+    
+}
+
+extension PokemonGalleryViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.size.width / 3.0
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
 }

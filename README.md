@@ -18,8 +18,8 @@
 # App route.
 
 1. Do we have a saved game?
-NO: Go to Terry Select Screen
-YES: go to 2
+* NO: Go to Terry Select Screen
+* YES: go to 2
 
 2. Show Pokemon
     * download & etc
