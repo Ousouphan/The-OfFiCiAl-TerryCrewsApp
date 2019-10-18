@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let factory = PokeViewModelFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        /*
         // what is my first VC?
         let vc = getFirstVC()
         
         self.window = self.window ?? UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
-        
+        */
         return true
     }
     
