@@ -156,7 +156,7 @@
         <!--Terry Select Page View Controller-->
         <scene sceneID="4Yp-1y-puF">
             <objects>
-                <pageViewController storyboardIdentifier="TerrySelectPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="qCd-ka-kO1" customClass="TerrySelectPageViewController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="TerrySelectPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qCd-ka-kO1" customClass="TerrySelectPageViewController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="YyF-0m-pNn" kind="show" identifier="goToPokemonCaptureScreen" id="G7u-wP-AXd"/>
                     </connections>

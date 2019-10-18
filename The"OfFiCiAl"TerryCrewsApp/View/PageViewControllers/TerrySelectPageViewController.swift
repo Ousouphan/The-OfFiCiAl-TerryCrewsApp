@@ -17,10 +17,6 @@ class TerrySelectPageViewController: UIPageViewController {
     
     var vcs: [TerrySelectViewController] = []
     
-    var currentVCIndex = 0
-    var nextVCIndex = 0
-    var pageIsAnimating = false
-    
     var currTerry: (image: UIImage, name: String)?
     
     override func viewDidLoad() {
@@ -28,7 +24,7 @@ class TerrySelectPageViewController: UIPageViewController {
         
         makeVCs()
         
-        delegate = self
+        // delegate = self
         dataSource = self
         
         // what page do we start on?
@@ -84,48 +80,30 @@ extension TerrySelectPageViewController: TerrySelectDelegate {
     
 }
 
-extension TerrySelectPageViewController: UIPageViewControllerDelegate {
-    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        pageIsAnimating = true
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            didFinishAnimating finished: Bool,
-                            previousViewControllers: [UIViewController],
-                            transitionCompleted completed: Bool) {
-        if finished || completed {
-            pageIsAnimating = false
-            currentVCIndex = nextVCIndex
-        }
-    }
-    
-}
 extension TerrySelectPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if pageIsAnimating { return nil }
+        let currVC = viewController as! TerrySelectViewController
         
         // 1 -> 0
-        if currentVCIndex == 0 {
+        if currVC.terryId == 0 {
             return nil
         }
         
-        nextVCIndex = currentVCIndex - 1
-        let vc = vcs[nextVCIndex]
+        let vc = vcs[currVC.terryId - 1]
         return vc
     }
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if pageIsAnimating { return nil }
+        let currVC = viewController as! TerrySelectViewController
         
         // 0 -> 1
-        if currentVCIndex == vcs.count - 1 {
+        if currVC.terryId == vcs.count - 1 {
             return nil
         }
         
-        nextVCIndex = currentVCIndex + 1
-        let vc = vcs[nextVCIndex]
+        let vc = vcs[currVC.terryId + 1]
         return vc
     }
     
