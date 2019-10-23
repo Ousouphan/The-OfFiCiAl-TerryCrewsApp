@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F3ECFB12359F7970005EF2A /* PokeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFB02359F7970005EF2A /* PokeTabBarController.swift */; };
+		3F3ECFAB2359E8C70005EF2A /* TerrySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */; };
+		3F3ECFAE2359ED8F0005EF2A /* TerrySelectPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */; };
 		3F6069D42358BDF8006B2083 /* PokeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */; };
 		3FBA918A2357618600679483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91892357618600679483 /* AppDelegate.swift */; };
 		3FBA918C2357618600679483 /* TestImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA918B2357618600679483 /* TestImageViewController.swift */; };
@@ -28,7 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F3ECFB02359F7970005EF2A /* PokeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTabBarController.swift; sourceTree = "<group>"; };
+		3F3ECFA92359E6FB0005EF2A /* SelectScreen.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SelectScreen.md; sourceTree = "<group>"; };
+		3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrySelectViewController.swift; sourceTree = "<group>"; };
+		3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrySelectPageViewController.swift; sourceTree = "<group>"; };
 		3F6069D12358BAC9006B2083 /* Singletons.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Singletons.md; sourceTree = "<group>"; };
 		3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeViewModelFactory.swift; sourceTree = "<group>"; };
 		3FBA91862357618600679483 /* The"OfFiCiAl"TerryCrewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The\"OfFiCiAl\"TerryCrewsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,12 +66,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F3ECFAF2359F77D0005EF2A /* TabBar */ = {
+		3F3ECFAC2359ED770005EF2A /* PageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F3ECFB02359F7970005EF2A /* PokeTabBarController.swift */,
+				3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */,
+				3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */,
 			);
-			path = TabBar;
+			path = PageViewControllers;
 			sourceTree = "<group>";
 		};
 		3F6069D22358BDD6006B2083 /* ViewModel Factory */ = {
@@ -82,6 +86,7 @@
 		3FBA917D2357618600679483 = {
 			isa = PBXGroup;
 			children = (
+				3F3ECFA92359E6FB0005EF2A /* SelectScreen.md */,
 				3F6069D12358BAC9006B2083 /* Singletons.md */,
 				3FBA919B235761CF00679483 /* README.md */,
 				3FBA91882357618600679483 /* The"OfFiCiAl"TerryCrewsApp */,
@@ -155,7 +160,7 @@
 		3FBA91A82357696100679483 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F3ECFAF2359F77D0005EF2A /* TabBar */,
+				3F3ECFAC2359ED770005EF2A /* PageViewControllers */,
 				3FBA918B2357618600679483 /* TestImageViewController.swift */,
 				3FBA91B723576D2F00679483 /* PokemonGalleryViewController.swift */,
 				3FBA91B923576D9500679483 /* PokeImageCollectionViewCell.swift */,
@@ -234,15 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3ECFAE2359ED8F0005EF2A /* TerrySelectPageViewController.swift in Sources */,
 				3FBA91B323576BE000679483 /* PokeDownloadError.swift in Sources */,
 				3FBA91B823576D2F00679483 /* PokemonGalleryViewController.swift in Sources */,
 				3FBA91AE23576AF900679483 /* PokemonValidator.swift in Sources */,
+				3F3ECFAB2359E8C70005EF2A /* TerrySelectViewController.swift in Sources */,
 				3FBA919E2357644200679483 /* PokemonServiceViewModelProtocol.swift in Sources */,
 				3FBA91B523576C1000679483 /* Utility.swift in Sources */,
 				3FBA918C2357618600679483 /* TestImageViewController.swift in Sources */,
 				3FBA91A12357658700679483 /* PokemonServiceViewModel.swift in Sources */,
 				3FBA91B123576B2000679483 /* PokemonServiceProtocol.swift in Sources */,
-				3F3ECFB12359F7970005EF2A /* PokeTabBarController.swift in Sources */,
 				3FBA91AD23576AF900679483 /* PokemonService.swift in Sources */,
 				3FBA91BA23576D9500679483 /* PokeImageCollectionViewCell.swift in Sources */,
 				3FBA91B023576AF900679483 /* PokemonFileService.swift in Sources */,

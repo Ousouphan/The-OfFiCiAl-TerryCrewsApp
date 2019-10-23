@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vs2-JO-H05">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qCd-ka-kO1">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="26"/>
+            <point key="canvasLocation" x="443" y="80"/>
         </scene>
         <!--Pokemon Gallery View Controller-->
         <scene sceneID="KDH-vp-ZU3">
@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-f7-aH7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IXl-go-eaQ">
                                     <size key="itemSize" width="200" height="200"/>
@@ -77,60 +77,96 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hv3-nh-qif"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="Bju-1x-Cne"/>
                     <connections>
                         <outlet property="collectionView" destination="g8h-f7-aH7" id="f1Q-IG-Wkm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhc-6y-zGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218.840579710145" y="79.6875"/>
+            <point key="canvasLocation" x="1310" y="80"/>
         </scene>
-        <!--Poke Tab Bar Controller-->
-        <scene sceneID="V65-Ho-cvF">
+        <!--Terry Select View Controller-->
+        <scene sceneID="6pQ-1d-MSX">
             <objects>
-                <tabBarController storyboardIdentifier="PokeTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="vs2-JO-H05" customClass="PokeTabBarController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aki-XU-Z8K">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="YyF-0m-pNn" kind="relationship" relationship="viewControllers" id="dMO-rd-whS"/>
-                        <segue destination="bzM-nl-c0k" kind="relationship" relationship="viewControllers" id="AIa-k2-tvN"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SvF-2u-Fo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1275" y="-142"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="y7i-Tw-qkf">
-            <objects>
-                <viewController id="bzM-nl-c0k" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Iqc-Wl-DBA">
+                <viewController storyboardIdentifier="TerrySelectViewController" id="pER-Lj-rOG" customClass="TerrySelectViewController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5t-hm-EKg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMN-c0-z1E">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" red="0.3803921569" green="0.015686274510000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o58-Y4-OUM">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="essense" translatesAutoresizingMaskIntoConstraints="NO" id="0qk-s5-IhT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="511.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="haW-7S-5gt">
+                                        <rect key="frame" x="0.0" y="511.5" width="374" height="306.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJS-yC-lJP">
+                                                <rect key="frame" x="122.5" y="0.0" width="129" height="133"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEj-QN-xuN">
+                                                <rect key="frame" x="59.5" y="173" width="255" height="133.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                <state key="normal" title="Choose This Terry"/>
+                                                <connections>
+                                                    <action selector="buttonAction:" destination="pER-Lj-rOG" eventType="touchUpInside" id="e1X-Dn-55h"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="haW-7S-5gt" firstAttribute="leading" secondItem="o58-Y4-OUM" secondAttribute="leading" id="E34-r7-nEK"/>
+                                    <constraint firstAttribute="trailing" secondItem="0qk-s5-IhT" secondAttribute="trailing" id="Ppj-el-dtZ"/>
+                                    <constraint firstItem="haW-7S-5gt" firstAttribute="top" secondItem="0qk-s5-IhT" secondAttribute="bottom" id="WV7-d4-JHc"/>
+                                    <constraint firstAttribute="trailing" secondItem="haW-7S-5gt" secondAttribute="trailing" id="Wew-BT-dEx"/>
+                                    <constraint firstItem="0qk-s5-IhT" firstAttribute="leading" secondItem="o58-Y4-OUM" secondAttribute="leading" id="cHw-qm-Gas"/>
+                                    <constraint firstItem="0qk-s5-IhT" firstAttribute="top" secondItem="o58-Y4-OUM" secondAttribute="top" id="gkR-Pi-il8"/>
+                                    <constraint firstAttribute="bottom" secondItem="haW-7S-5gt" secondAttribute="bottom" id="hOh-fB-2EV"/>
+                                    <constraint firstItem="0qk-s5-IhT" firstAttribute="height" secondItem="haW-7S-5gt" secondAttribute="height" multiplier="5:3" id="t8i-fg-VNj"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.3803921569" green="0.015686274510000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HMN-c0-z1E" firstAttribute="leading" secondItem="675-Cd-ysq" secondAttribute="leading" id="1rl-UT-qE6"/>
-                            <constraint firstItem="675-Cd-ysq" firstAttribute="trailing" secondItem="HMN-c0-z1E" secondAttribute="trailing" id="XE6-dr-bEb"/>
-                            <constraint firstItem="HMN-c0-z1E" firstAttribute="top" secondItem="675-Cd-ysq" secondAttribute="top" id="nda-M5-h9J"/>
-                            <constraint firstItem="675-Cd-ysq" firstAttribute="bottom" secondItem="HMN-c0-z1E" secondAttribute="bottom" id="wvA-Sp-rbo"/>
+                            <constraint firstItem="o58-Y4-OUM" firstAttribute="leading" secondItem="TZH-BY-cHM" secondAttribute="leading" constant="20" id="3x3-oF-BDF"/>
+                            <constraint firstItem="o58-Y4-OUM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TZH-BY-cHM" secondAttribute="top" id="GEw-Jh-npv"/>
+                            <constraint firstItem="TZH-BY-cHM" firstAttribute="trailing" secondItem="o58-Y4-OUM" secondAttribute="trailing" constant="20" id="c41-vt-5FH"/>
+                            <constraint firstItem="o58-Y4-OUM" firstAttribute="centerY" secondItem="TZH-BY-cHM" secondAttribute="centerY" id="iZk-en-TeO"/>
+                            <constraint firstItem="TZH-BY-cHM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="o58-Y4-OUM" secondAttribute="bottom" id="ij5-yJ-LUa"/>
+                            <constraint firstItem="o58-Y4-OUM" firstAttribute="centerX" secondItem="TZH-BY-cHM" secondAttribute="centerX" id="xdG-X2-XYS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="675-Cd-ysq"/>
+                        <viewLayoutGuide key="safeArea" id="TZH-BY-cHM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="DNw-6H-Vhh"/>
+                    <connections>
+                        <outlet property="button" destination="DEj-QN-xuN" id="BzW-Xb-9Fi"/>
+                        <outlet property="imageView" destination="0qk-s5-IhT" id="Z3B-R8-UdO"/>
+                        <outlet property="label" destination="cJS-yC-lJP" id="GxG-3Y-g2Q"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vz-SD-1Dx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wd-Xj-xzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-563"/>
+            <point key="canvasLocation" x="2100" y="-687"/>
+        </scene>
+        <!--Terry Select Page View Controller-->
+        <scene sceneID="4Yp-1y-puF">
+            <objects>
+                <pageViewController storyboardIdentifier="TerrySelectPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qCd-ka-kO1" customClass="TerrySelectPageViewController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="YyF-0m-pNn" kind="show" identifier="goToPokemonCaptureScreen" id="G7u-wP-AXd"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tih-Ap-7tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="-687"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="essense" width="1920" height="1080"/>
+    </resources>
 </document>
