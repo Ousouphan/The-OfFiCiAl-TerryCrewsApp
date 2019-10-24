@@ -25,13 +25,16 @@ final class PokemonService: PokemonServiceProtocol {
     let session: URLSession
     let files: ImageFileService
     let cache: NSCache<NSString, NSData>
+    let coreData: CoreDataManager
     
     init(_ session: URLSession,
          _ files: ImageFileService,
-         _ cache: NSCache<NSString, NSData>) {
+         _ cache: NSCache<NSString, NSData>,
+         _ coreData: CoreDataManager) {
         self.session = session
         self.files = files
         self.cache = cache
+        self.coreData = coreData
     }
     
     func downloadPokemon(_ query: String,
@@ -147,5 +150,8 @@ final class PokemonService: PokemonServiceProtocol {
         }
         dataTask.resume()
     }
+    
+    // make trainer
+    
 
 }

@@ -15,11 +15,13 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
         return pokemon.count
     }
     var handler: (()->Void)?
+    var trainer: Trainer?
     
     let service: PokemonService
     
     init(_ service: PokemonService) {
         self.service = service
+        
     }
     
     func bind(_ handler: @escaping () -> Void) {
@@ -51,6 +53,10 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     
     func caught(at index: Int) {
         print("did catch \(pokemon[index].name)")
+    }
+    
+    func makeTrainer(name: String, image: Data) {
+        // make trainer here with service
     }
     
 }

@@ -25,4 +25,7 @@ protocol PokemonServiceViewModelProtocol {
     
     // we caught a pokemon
     func caught(at index: Int)
+    
+    // we made a trainer
+    func makeTrainer(name: String, image: Data)
 }
