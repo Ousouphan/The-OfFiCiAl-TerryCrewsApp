@@ -15,7 +15,7 @@ class ImageFileService {
     
     init() {
         fileManager = FileManager.default
-        directory = fileManager.urls(for: .cachesDirectory,
+        directory = fileManager.urls(for: .documentDirectory,
                                      in: .userDomainMask).first!
     }
     
@@ -26,7 +26,7 @@ class ImageFileService {
             try image.write(to: file)
         }
         catch {
-            print("save-stop")
+            // print("save-stop")
             //print("Error found!: \(error)")
         }
     }
@@ -39,7 +39,7 @@ class ImageFileService {
             return image
         }
         catch {
-            print("load-stop")
+            // print("load-stop")
             //print("Error loading file! :\(error)")
         }
         return nil

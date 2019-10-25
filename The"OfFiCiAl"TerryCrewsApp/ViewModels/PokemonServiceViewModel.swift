@@ -10,33 +10,59 @@ import Foundation
 
 class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     
-    var pokemon = [Pokemon]()
+    // MARK: - Properties
+    
+    var pokemon = [Pokemon]() {
+        didSet {
+            handler?()
+        }
+    }
     var count: Int {
         return pokemon.count
     }
     var handler: (()->Void)?
+    var trainer: Trainer? {
+        didSet {
+            guard let t = trainer else { return }
+            print("Did load trainer \(t.name!), who has \(t.pokemon?.count ?? 0) captured!")
+        }
+    }
     
-    let service: PokemonService
+    let service: PokemonServiceProtocol
     
-    init(_ service: PokemonService) {
+    // MARK: - Initializers
+    
+    init(_ service: PokemonServiceProtocol) {
         self.service = service
     }
+    
+    // MARK: - Data-binding Method
     
     func bind(_ handler: @escaping () -> Void) {
         self.handler = handler
     }
+    
+    // MARK: - Networking Functions
     
     func download(_ query: String) {
         service.downloadPokemon(query) { (result) in
             switch result {
             case .success(let poke):
                 self.pokemon.append(poke)
-                self.handler?()
             default:
                 print("Error")
             }
         }
     }
+    
+    // unimplemented.
+    func batchDownload(_ queries: String...) {
+        for q in queries {
+            
+        }
+    }
+    
+    // MARK: - Data Accessors
     
     func image(at index: Int, _ completion: @escaping (Data?) -> Void) {
         let mon = pokemon[index]
@@ -50,7 +76,17 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     }
     
     func caught(at index: Int) {
-        print("did catch \(pokemon[index].name)")
+        let mon = pokemon[index]
+        print("did catch \(mon.name)")
+        trainer?.addToPokemon(mon)
+        pokemon.remove(at: index)
+        service.saveData()
+    }
+    
+    func makeTrainer(name: String, image: Data) {
+        // make trainer here with service
+        trainer = service.makeTrainer(name: name, image: image)
+        service.saveData()
     }
     
 }

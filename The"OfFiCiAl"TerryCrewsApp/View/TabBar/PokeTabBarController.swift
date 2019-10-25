@@ -20,8 +20,6 @@ class PokeTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
 
 }

@@ -25,9 +25,9 @@ class PokemonGalleryViewController: UIViewController {
             }
         }
         
-        vm.download("wailord")
-        for _ in 0..<10 {
-            vm.download("spheal")
+        for _ in 0..<15 {
+            let id = Int.random(in: 1...151)
+            vm.download("\(id)")
         }
     }
     
@@ -57,7 +57,9 @@ extension PokemonGalleryViewController: UICollectionViewDataSource {
 }
 
 extension PokemonGalleryViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        vm.caught(at: indexPath.row)
+    }
 }
 
 extension PokemonGalleryViewController: UICollectionViewDelegateFlowLayout {
