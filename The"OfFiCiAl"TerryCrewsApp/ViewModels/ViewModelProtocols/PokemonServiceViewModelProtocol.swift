@@ -17,7 +17,8 @@ protocol PokemonServiceViewModelProtocol {
     var count: Int { get }
     
     func bind(_ handler: @escaping ()->Void)
-    func download(_ query: String) 
+    func download(_ query: String)
+    func batchDownload(_ queries: [String])
     func image(at index: Int, _ completion: @escaping (Data?)->Void)
     
     // go to a catch screen, somehow

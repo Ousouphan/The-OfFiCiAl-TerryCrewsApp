@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-f7-aH7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IXl-go-eaQ">
                                     <size key="itemSize" width="200" height="200"/>
@@ -77,13 +77,88 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hv3-nh-qif"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="P4P-WD-aVF"/>
                     <connections>
                         <outlet property="collectionView" destination="g8h-f7-aH7" id="f1Q-IG-Wkm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhc-6y-zGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="80"/>
+            <point key="canvasLocation" x="2432" y="-11"/>
+        </scene>
+        <!--Pokedex-->
+        <scene sceneID="4Rc-ej-IUu">
+            <objects>
+                <viewController id="szU-ds-9mi" customClass="PokedexViewController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZr-Wc-LNH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t2R-vf-jsq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1cM-vm-CAb">
+                                    <size key="itemSize" width="200" height="297"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dexCell" id="d54-Pj-SDb" customClass="PokedexCollectionViewCell" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="297"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="297"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fli-bP-bae">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="fli-bP-bae" secondAttribute="height" multiplier="1:1" id="JwZ-AB-XV9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyU-59-aui">
+                                                    <rect key="frame" x="16" y="200" width="168" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="YyU-59-aui" firstAttribute="leading" secondItem="d54-Pj-SDb" secondAttribute="leadingMargin" constant="8" id="7gR-XR-06N"/>
+                                            <constraint firstItem="fli-bP-bae" firstAttribute="leading" secondItem="d54-Pj-SDb" secondAttribute="leading" id="IfG-sF-lww"/>
+                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="YyU-59-aui" secondAttribute="bottom" id="L8S-gf-BDf"/>
+                                            <constraint firstAttribute="trailing" secondItem="fli-bP-bae" secondAttribute="trailing" id="QZS-RR-ePi"/>
+                                            <constraint firstItem="YyU-59-aui" firstAttribute="top" secondItem="fli-bP-bae" secondAttribute="bottom" id="dZi-OI-g5V"/>
+                                            <constraint firstItem="fli-bP-bae" firstAttribute="top" secondItem="d54-Pj-SDb" secondAttribute="top" id="lPg-bf-1Hp"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="YyU-59-aui" secondAttribute="trailing" constant="8" id="z8z-xQ-9Xa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="fli-bP-bae" id="Dl5-VI-nGL"/>
+                                            <outlet property="label" destination="YyU-59-aui" id="2q7-kT-bjG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZgD-NS-ZAU" firstAttribute="trailing" secondItem="t2R-vf-jsq" secondAttribute="trailing" id="5Jk-4d-IEZ"/>
+                            <constraint firstItem="t2R-vf-jsq" firstAttribute="top" secondItem="ZgD-NS-ZAU" secondAttribute="top" id="CzB-8f-nxk"/>
+                            <constraint firstItem="t2R-vf-jsq" firstAttribute="leading" secondItem="ZgD-NS-ZAU" secondAttribute="leading" id="eUS-15-Ie0"/>
+                            <constraint firstItem="ZgD-NS-ZAU" firstAttribute="bottom" secondItem="t2R-vf-jsq" secondAttribute="bottom" id="tEy-3R-Kjt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZgD-NS-ZAU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pokedex" id="AGa-bz-zlH"/>
+                    <connections>
+                        <outlet property="collectionView" destination="t2R-vf-jsq" id="8Ve-vA-3aj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zn-Tn-Cu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431.8840579710145" y="725.89285714285711"/>
         </scene>
         <!--Terry Select View Controller-->
         <scene sceneID="6pQ-1d-MSX">
@@ -158,12 +233,30 @@
             <objects>
                 <pageViewController storyboardIdentifier="TerrySelectPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qCd-ka-kO1" customClass="TerrySelectPageViewController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="YyF-0m-pNn" kind="show" identifier="goToPokemonCaptureScreen" id="G7u-wP-AXd"/>
+                        <segue destination="oFN-SQ-3Wl" kind="show" identifier="goToPokemonCaptureScreen" id="G7u-wP-AXd"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tih-Ap-7tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1309" y="-687"/>
+        </scene>
+        <!--Poke Tab Bar Controller-->
+        <scene sceneID="JKb-SW-He5">
+            <objects>
+                <tabBarController storyboardIdentifier="PokeTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="oFN-SQ-3Wl" customClass="PokeTabBarController" customModule="The_OfFiCiAl_TerryCrewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rjc-J9-bVx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YyF-0m-pNn" kind="relationship" relationship="viewControllers" id="hi6-Gk-q3u"/>
+                        <segue destination="szU-ds-9mi" kind="relationship" relationship="viewControllers" id="Yib-7u-TXP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBD-ee-wfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308.6956521739132" y="79.6875"/>
         </scene>
     </scenes>
     <resources>

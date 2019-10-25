@@ -29,6 +29,7 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     }
     
     let service: PokemonServiceProtocol
+    let downloadLock = NSLock()
     
     // MARK: - Initializers
     
@@ -55,10 +56,32 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
         }
     }
     
-    // unimplemented.
-    func batchDownload(_ queries: String...) {
-        for q in queries {
-            
+    func batchDownload(_ queries: [String]) {
+        downloadLock.lock()
+        // 1. have a container/array for all downloads
+        let group = DispatchGroup()
+        // 2. for each download, when done, put it in its proper location
+        //    within the container
+        var newPokemon: [Pokemon?] = Array<Pokemon?>(repeating: nil,
+                                                     count: queries.count)
+        for (i, q) in queries.enumerated() {
+            group.enter()
+            service.downloadPokemon(q) { (result) in
+                switch result {
+                case .success(let poke):
+                    newPokemon[i] = poke
+                default:
+                    print("Error")
+                }
+                group.leave()
+            }
+        }
+        // 3. when all downloads are done, then append to the pokemon array
+        //    this will update my binders & ui.
+        group.notify(queue: .global()) {
+            let nonNilPokemon = newPokemon.compactMap { $0 }
+            self.pokemon.append(contentsOf: nonNilPokemon)
+            self.downloadLock.unlock()
         }
     }
     

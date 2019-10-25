@@ -10,12 +10,19 @@ import UIKit
 
 class PokeTabBarController: UITabBarController {
 
+    var firstVC: PokemonGalleryViewController!
+    var secondVC: PokedexViewController!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let factory = appDelegate.factory
         
-        let firstVC = viewControllers![0] as! PokemonGalleryViewController
-        firstVC.vm = appDelegate.factory.buildPokeServiceVM()
+        firstVC = viewControllers![0] as? PokemonGalleryViewController
+        firstVC.vm = factory.buildPokeServiceVM()
+        
+        secondVC = viewControllers![1] as? PokedexViewController
+        secondVC.vm = factory.buildPokeServiceVM()
     }
     
     override func viewDidLoad() {

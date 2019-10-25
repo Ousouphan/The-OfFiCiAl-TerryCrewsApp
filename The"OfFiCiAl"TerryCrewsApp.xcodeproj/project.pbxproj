@@ -11,6 +11,7 @@
 		3F03B02F2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B02D2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld */; };
 		3F03B0312361282000C860A5 /* CoreDataManager+Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B0302361282000C860A5 /* CoreDataManager+Trainer.swift */; };
 		3F03B03623612A2300C860A5 /* PokeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B03523612A2300C860A5 /* PokeTabBarController.swift */; };
+		3F0C839D23633968002EFBC1 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C839C23633968002EFBC1 /* PokedexViewController.swift */; };
 		3F3ECFAB2359E8C70005EF2A /* TerrySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */; };
 		3F3ECFAE2359ED8F0005EF2A /* TerrySelectPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */; };
 		3F6069D42358BDF8006B2083 /* PokeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */; };
@@ -42,6 +43,8 @@
 		3F03B02E2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TerryCrewsAppModel.xcdatamodel; sourceTree = "<group>"; };
 		3F03B0302361282000C860A5 /* CoreDataManager+Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Trainer.swift"; sourceTree = "<group>"; };
 		3F03B03523612A2300C860A5 /* PokeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeTabBarController.swift; sourceTree = "<group>"; };
+		3F0C839C23633968002EFBC1 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		3F0C839E23634461002EFBC1 /* Pagination.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Pagination.md; sourceTree = "<group>"; };
 		3F3ECFA92359E6FB0005EF2A /* SelectScreen.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SelectScreen.md; sourceTree = "<group>"; };
 		3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrySelectViewController.swift; sourceTree = "<group>"; };
 		3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrySelectPageViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		3FBA917D2357618600679483 = {
 			isa = PBXGroup;
 			children = (
+				3F0C839E23634461002EFBC1 /* Pagination.md */,
 				3F3ECFA92359E6FB0005EF2A /* SelectScreen.md */,
 				3F6069D12358BAC9006B2083 /* Singletons.md */,
 				3FBA919B235761CF00679483 /* README.md */,
@@ -215,6 +219,7 @@
 				3F3ECFAC2359ED770005EF2A /* PageViewControllers */,
 				3F03B03423612A2300C860A5 /* TabBar */,
 				3FBA91B723576D2F00679483 /* PokemonGalleryViewController.swift */,
+				3F0C839C23633968002EFBC1 /* PokedexViewController.swift */,
 				3FBA91B923576D9500679483 /* PokeImageCollectionViewCell.swift */,
 			);
 			path = View;
@@ -310,6 +315,7 @@
 				3FBA91A12357658700679483 /* PokemonServiceViewModel.swift in Sources */,
 				3F03B0312361282000C860A5 /* CoreDataManager+Trainer.swift in Sources */,
 				3FBA91B123576B2000679483 /* PokemonServiceProtocol.swift in Sources */,
+				3F0C839D23633968002EFBC1 /* PokedexViewController.swift in Sources */,
 				3FBA91AD23576AF900679483 /* PokemonService.swift in Sources */,
 				3FBA91BA23576D9500679483 /* PokeImageCollectionViewCell.swift in Sources */,
 				3FBA91B023576AF900679483 /* ImageFileService.swift in Sources */,
