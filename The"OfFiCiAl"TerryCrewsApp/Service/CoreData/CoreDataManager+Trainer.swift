@@ -25,45 +25,33 @@ extension CoreDataManager {
         }
     }
     
-    func saveTrainer(name: String?, image: String?) {
+    func loadTrainerSynchronously() -> Trainer? {
+        let context = mainContext
+        let desc = NSEntityDescription.entity(forEntityName: entityName,
+                                              in: context)!
+        var trainer: Trainer! = nil
+        context.performAndWait {
+            let request = NSFetchRequest<Trainer>()
+            request.entity = desc
+            request.fetchLimit = 1
+            let results = try! context.fetch(request)
+            trainer = results.first
+        }
+        return trainer
+    }
+    
+    func saveTrainer(name: String, image: String) -> Trainer {
         
         let context = mainContext
         let desc = NSEntityDescription.entity(forEntityName: entityName,
                                               in: context)!
-        context.perform {
-            let trainer = Trainer(entity: desc, insertInto: context)
+        var trainer: Trainer! = nil
+        context.performAndWait {
+            trainer = Trainer(entity: desc, insertInto: context)
             trainer.name = name
             trainer.image = image
             self.saveMain()
         }
-        
+        return trainer!
     }
-    /*
-    func fetchData(_ completion: @escaping ([Trainer])->Void) {
-        let context = mainContext
-        let desc = NSEntityDescription.entity(forEntityName: "Person",
-                                              in: context)!
-        // contexts can do work on their own thread
-        context.perform {
-            let request = NSFetchRequest<Person>()
-            request.entity = desc
-            // let request: NSFetchRequest<Person> = Person.fetchRequest()
-            let results = try! context.fetch(request)
-            completion(results)
-        }
-    }
-    
-    func makePerson() {
-        let context = backgroundContext
-        context.perform {
-            let desc = NSEntityDescription.entity(forEntityName: "Person",
-                                                  in: context)!
-            let person = Person(entity: desc, insertInto: context)
-            person.name = "Bob"
-            person.age = 34
-            person.occupation = "Builder"
-            try! context.save()
-        }
-    }
-     */
 }

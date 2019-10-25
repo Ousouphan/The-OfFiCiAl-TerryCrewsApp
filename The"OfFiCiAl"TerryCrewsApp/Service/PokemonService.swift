@@ -83,6 +83,7 @@ final class PokemonService: PokemonServiceProtocol {
                 return
             }
             let decoder = JSONDecoder()
+            decoder.userInfo = [.context: self.coreData.mainContext]
             do {
                 let pokemon = try decoder.decode(Pokemon.self, from: data)
                 completion(.success(pokemon))
@@ -120,7 +121,7 @@ final class PokemonService: PokemonServiceProtocol {
         // RAM
         // YES: return that.
         if let image = cache.object(forKey: fileName.ns) {
-            print("Did load from in-memory")
+            // print("Did load from in-memory")
             completion(image.data)
             return
         }
@@ -130,7 +131,7 @@ final class PokemonService: PokemonServiceProtocol {
         // YES: return that
         if let image = files.load(name: fileName) {
             // also adds to the in-memory cache
-            print("Did load from filesystem")
+            // print("Did load from filesystem")
             cache.setObject(image.ns, forKey: fileName.ns)
             completion(image)
             return
@@ -142,7 +143,7 @@ final class PokemonService: PokemonServiceProtocol {
             // also add to in-memory cache
             // also adds to filesystem
             if let image = data {
-                print("Did load from internet")
+                // print("Did load from internet")
                 self.cache.setObject(image.ns, forKey: fileName.ns)
                 self.files.save(name: fileName, image)
             }
@@ -152,6 +153,16 @@ final class PokemonService: PokemonServiceProtocol {
     }
     
     // make trainer
+    
+    func makeTrainer(name: String, image: Data) -> Trainer {
+        files.save(name: name, image)
+        return coreData.saveTrainer(name: name, image: name)
+    }
+    
+    func saveData() {
+        coreData.saveMain()
+        coreData.saveBackground()
+    }
     
 
 }

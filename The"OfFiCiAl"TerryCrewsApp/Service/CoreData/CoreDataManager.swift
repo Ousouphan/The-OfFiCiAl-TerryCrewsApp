@@ -43,7 +43,9 @@ class CoreDataManager {
     
     // MARK - Lifecycle Methods
     
-    init() { }
+    init() {
+        
+    }
     
     deinit {
         saveBackground()
