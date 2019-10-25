@@ -51,27 +51,14 @@ class TerrySelectPageViewController: UIPageViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToPokemonCaptureScreen",
-            let vc = segue.destination as? PokemonGalleryViewController{
+            let vc = segue.destination as? PokeTabBarController{
             // pass currTerry along.
             // to do to the next app, need to make... vm
             // vm comes from app Delegate
             
-            // 1. access AppDelegate
-            // 2. Make VM & give to VC
-            // 3. Give Terry
-            
-            // 1.
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            
-            // 2.
-            let vm = appDelegate.factory.buildPokeServiceVM()
-            vc.vm = vm
-            
-            // 3.
-            // terry.
             if let terryInfo = sender as? (image: UIImage, name: String),
                 let image = terryInfo.image.pngData() {
-                vm.makeTrainer(name: terryInfo.name, image: image)
+                vc.firstVC.vm.makeTrainer(name: terryInfo.name, image: image)
             }
         }
     }

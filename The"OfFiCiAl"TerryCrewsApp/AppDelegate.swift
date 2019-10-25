@@ -32,12 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var vc: UIViewController! = nil
         let trainer = factory.coreData.loadTrainerSynchronously()
         if let trainer = trainer {
-            let galleryVC = main.instantiateViewController(withIdentifier: "PokemonGalleryViewController") as! PokemonGalleryViewController
+            let tabVC = main.instantiateViewController(withIdentifier: "PokeTabBarController") as! PokeTabBarController
             // make a ViewModel for our ViewController
             // from our Factory.
-            galleryVC.vm = self.factory.buildPokeServiceVM()
-            galleryVC.vm.trainer = trainer
-            vc = galleryVC
+            
+            tabVC.firstVC.vm.trainer = trainer
+            vc = tabVC
         }
         else {
             vc = main.instantiateViewController(withIdentifier: "TerrySelectPageViewController") as!
