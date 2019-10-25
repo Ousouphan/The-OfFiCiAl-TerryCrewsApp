@@ -16,18 +16,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let factory = PokeViewModelFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        /*
+        
         // what is my first VC?
-        let vc = getFirstVC()
         
         self.window = self.window ?? UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = vc
+        self.window?.rootViewController = chooseFirstVC()
         self.window?.makeKeyAndVisible()
-        */
+        
+
         return true
     }
     
-    func getFirstVC() -> UIViewController {
+    func chooseFirstVC() -> UIViewController {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        var vc: UIViewController! = nil
+        let trainer = factory.coreData.loadTrainerSynchronously()
+        if let trainer = trainer {
+            let galleryVC = main.instantiateViewController(withIdentifier: "PokemonGalleryViewController") as! PokemonGalleryViewController
+            // make a ViewModel for our ViewController
+            // from our Factory.
+            galleryVC.vm = self.factory.buildPokeServiceVM()
+            galleryVC.vm.trainer = trainer
+            vc = galleryVC
+        }
+        else {
+            vc = main.instantiateViewController(withIdentifier: "TerrySelectPageViewController") as!
+            TerrySelectPageViewController
+        }
+        self.window?.rootViewController = vc
+        
+        return vc
+    }
+    
+    func getFirstVCOld() -> UIViewController {
         let main = UIStoryboard(name: "Main", bundle: nil)
         
         // do some logic, decide the first VC

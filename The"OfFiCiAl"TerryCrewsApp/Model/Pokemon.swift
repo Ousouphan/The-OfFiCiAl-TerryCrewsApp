@@ -7,12 +7,17 @@
 //
 
 import Foundation
-
+/*
 struct Pokemon: Decodable {
     let name: String
     let sprites: Sprites
 }
-
+ Decodable {
+ 
+ enum CodingKeys: String, CodingKey {
+ case name
+ case sprites
+ }
 struct Sprites: Decodable {
     let fDefault: String?
     
@@ -20,3 +25,4 @@ struct Sprites: Decodable {
         case fDefault = "front_default"
     }
 }
+*/

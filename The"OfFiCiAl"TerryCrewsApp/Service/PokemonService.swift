@@ -25,13 +25,16 @@ final class PokemonService: PokemonServiceProtocol {
     let session: URLSession
     let files: ImageFileService
     let cache: NSCache<NSString, NSData>
+    let coreData: CoreDataManager
     
     init(_ session: URLSession,
          _ files: ImageFileService,
-         _ cache: NSCache<NSString, NSData>) {
+         _ cache: NSCache<NSString, NSData>,
+         _ coreData: CoreDataManager) {
         self.session = session
         self.files = files
         self.cache = cache
+        self.coreData = coreData
     }
     
     func downloadPokemon(_ query: String,
@@ -80,6 +83,7 @@ final class PokemonService: PokemonServiceProtocol {
                 return
             }
             let decoder = JSONDecoder()
+            decoder.userInfo = [.context: self.coreData.mainContext]
             do {
                 let pokemon = try decoder.decode(Pokemon.self, from: data)
                 completion(.success(pokemon))
@@ -117,7 +121,7 @@ final class PokemonService: PokemonServiceProtocol {
         // RAM
         // YES: return that.
         if let image = cache.object(forKey: fileName.ns) {
-            print("Did load from in-memory")
+            // print("Did load from in-memory")
             completion(image.data)
             return
         }
@@ -127,7 +131,7 @@ final class PokemonService: PokemonServiceProtocol {
         // YES: return that
         if let image = files.load(name: fileName) {
             // also adds to the in-memory cache
-            print("Did load from filesystem")
+            // print("Did load from filesystem")
             cache.setObject(image.ns, forKey: fileName.ns)
             completion(image)
             return
@@ -139,7 +143,7 @@ final class PokemonService: PokemonServiceProtocol {
             // also add to in-memory cache
             // also adds to filesystem
             if let image = data {
-                print("Did load from internet")
+                // print("Did load from internet")
                 self.cache.setObject(image.ns, forKey: fileName.ns)
                 self.files.save(name: fileName, image)
             }
@@ -147,5 +151,18 @@ final class PokemonService: PokemonServiceProtocol {
         }
         dataTask.resume()
     }
+    
+    // make trainer
+    
+    func makeTrainer(name: String, image: Data) -> Trainer {
+        files.save(name: name, image)
+        return coreData.saveTrainer(name: name, image: name)
+    }
+    
+    func saveData() {
+        coreData.saveMain()
+        coreData.saveBackground()
+    }
+    
 
 }
