@@ -27,8 +27,4 @@ protocol PokemonServiceProtocol {
     // 1. a query Pokemon
     // 2. some function to do when image is done downloading
     func downloadPicture(_ pokemon: Pokemon, _ completion: @escaping (Data?)->Void)
-    
-    func makeTrainer(name: String, image: Data) -> Trainer
-    
-    func saveData()
 }

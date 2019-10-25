@@ -7,18 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F03B0292361221000C860A5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B0272361221000C860A5 /* CoreDataManager.swift */; };
-		3F03B02F2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B02D2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld */; };
-		3F03B0312361282000C860A5 /* CoreDataManager+Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B0302361282000C860A5 /* CoreDataManager+Trainer.swift */; };
-		3F03B03623612A2300C860A5 /* PokeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03B03523612A2300C860A5 /* PokeTabBarController.swift */; };
 		3F3ECFAB2359E8C70005EF2A /* TerrySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */; };
 		3F3ECFAE2359ED8F0005EF2A /* TerrySelectPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */; };
 		3F6069D42358BDF8006B2083 /* PokeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */; };
-		3FA753642363135E00E8EBAB /* Pokemon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA753602363135E00E8EBAB /* Pokemon+CoreDataClass.swift */; };
-		3FA753652363135E00E8EBAB /* Pokemon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA753612363135E00E8EBAB /* Pokemon+CoreDataProperties.swift */; };
-		3FA753662363135E00E8EBAB /* Sprites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA753622363135E00E8EBAB /* Sprites+CoreDataClass.swift */; };
-		3FA753672363135E00E8EBAB /* Sprites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA753632363135E00E8EBAB /* Sprites+CoreDataProperties.swift */; };
-		3FA753692363141100E8EBAB /* Decodable+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA753682363141100E8EBAB /* Decodable+CoreData.swift */; };
 		3FBA918A2357618600679483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91892357618600679483 /* AppDelegate.swift */; };
 		3FBA918C2357618600679483 /* TestImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA918B2357618600679483 /* TestImageViewController.swift */; };
 		3FBA918F2357618600679483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA918D2357618600679483 /* Main.storyboard */; };
@@ -29,7 +20,7 @@
 		3FBA91A7235766FF00679483 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91A6235766FF00679483 /* Pokemon.swift */; };
 		3FBA91AD23576AF900679483 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91A923576AF900679483 /* PokemonService.swift */; };
 		3FBA91AE23576AF900679483 /* PokemonValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91AA23576AF900679483 /* PokemonValidator.swift */; };
-		3FBA91B023576AF900679483 /* ImageFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91AC23576AF900679483 /* ImageFileService.swift */; };
+		3FBA91B023576AF900679483 /* PokemonFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91AC23576AF900679483 /* PokemonFileService.swift */; };
 		3FBA91B123576B2000679483 /* PokemonServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91AB23576AF900679483 /* PokemonServiceProtocol.swift */; };
 		3FBA91B323576BE000679483 /* PokeDownloadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91B223576BE000679483 /* PokeDownloadError.swift */; };
 		3FBA91B523576C1000679483 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA91B423576C1000679483 /* Utility.swift */; };
@@ -38,20 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F03B0272361221000C860A5 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		3F03B02E2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TerryCrewsAppModel.xcdatamodel; sourceTree = "<group>"; };
-		3F03B0302361282000C860A5 /* CoreDataManager+Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Trainer.swift"; sourceTree = "<group>"; };
-		3F03B03523612A2300C860A5 /* PokeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeTabBarController.swift; sourceTree = "<group>"; };
 		3F3ECFA92359E6FB0005EF2A /* SelectScreen.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SelectScreen.md; sourceTree = "<group>"; };
 		3F3ECFAA2359E8C70005EF2A /* TerrySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrySelectViewController.swift; sourceTree = "<group>"; };
 		3F3ECFAD2359ED8F0005EF2A /* TerrySelectPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrySelectPageViewController.swift; sourceTree = "<group>"; };
 		3F6069D12358BAC9006B2083 /* Singletons.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Singletons.md; sourceTree = "<group>"; };
 		3F6069D32358BDF8006B2083 /* PokeViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeViewModelFactory.swift; sourceTree = "<group>"; };
-		3FA753602363135E00E8EBAB /* Pokemon+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3FA753612363135E00E8EBAB /* Pokemon+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3FA753622363135E00E8EBAB /* Sprites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sprites+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3FA753632363135E00E8EBAB /* Sprites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sprites+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3FA753682363141100E8EBAB /* Decodable+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+CoreData.swift"; sourceTree = "<group>"; };
 		3FBA91862357618600679483 /* The"OfFiCiAl"TerryCrewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The\"OfFiCiAl\"TerryCrewsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBA91892357618600679483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBA918B2357618600679483 /* TestImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +48,7 @@
 		3FBA91A923576AF900679483 /* PokemonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 		3FBA91AA23576AF900679483 /* PokemonValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonValidator.swift; sourceTree = "<group>"; };
 		3FBA91AB23576AF900679483 /* PokemonServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonServiceProtocol.swift; sourceTree = "<group>"; };
-		3FBA91AC23576AF900679483 /* ImageFileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFileService.swift; sourceTree = "<group>"; };
+		3FBA91AC23576AF900679483 /* PokemonFileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonFileService.swift; sourceTree = "<group>"; };
 		3FBA91B223576BE000679483 /* PokeDownloadError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeDownloadError.swift; sourceTree = "<group>"; };
 		3FBA91B423576C1000679483 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3FBA91B723576D2F00679483 /* PokemonGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGalleryViewController.swift; sourceTree = "<group>"; };
@@ -84,33 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F03B0322361282300C860A5 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				3F03B02D2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld */,
-				3F03B0272361221000C860A5 /* CoreDataManager.swift */,
-				3F03B0302361282000C860A5 /* CoreDataManager+Trainer.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		3F03B03323612A0600C860A5 /* Unused */ = {
-			isa = PBXGroup;
-			children = (
-				3FBA918B2357618600679483 /* TestImageViewController.swift */,
-			);
-			path = Unused;
-			sourceTree = "<group>";
-		};
-		3F03B03423612A2300C860A5 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				3F03B03523612A2300C860A5 /* PokeTabBarController.swift */,
-			);
-			name = TabBar;
-			path = "The\"OfFiCiAl\"TerryCrewsApp/View/TabBar";
-			sourceTree = SOURCE_ROOT;
-		};
 		3F3ECFAC2359ED770005EF2A /* PageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +108,7 @@
 				3FBA91B423576C1000679483 /* Utility.swift */,
 				3FBA91A5235766F600679483 /* Model */,
 				3FBA91A2235765E000679483 /* Service */,
+				3FBA919C2357642C00679483 /* ViewModelProtocols */,
 				3FBA919F2357657900679483 /* ViewModels */,
 				3FBA91A82357696100679483 /* View */,
 				3FBA91892357618600679483 /* AppDelegate.swift */,
@@ -175,7 +131,6 @@
 		3FBA919F2357657900679483 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3FBA919C2357642C00679483 /* ViewModelProtocols */,
 				3F6069D22358BDD6006B2083 /* ViewModel Factory */,
 				3FBA91A02357658700679483 /* PokemonServiceViewModel.swift */,
 			);
@@ -185,10 +140,9 @@
 		3FBA91A2235765E000679483 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3F03B0322361282300C860A5 /* CoreData */,
-				3FBA91AC23576AF900679483 /* ImageFileService.swift */,
-				3FBA91AB23576AF900679483 /* PokemonServiceProtocol.swift */,
+				3FBA91AC23576AF900679483 /* PokemonFileService.swift */,
 				3FBA91A923576AF900679483 /* PokemonService.swift */,
+				3FBA91AB23576AF900679483 /* PokemonServiceProtocol.swift */,
 				3FBA91AA23576AF900679483 /* PokemonValidator.swift */,
 			);
 			path = Service;
@@ -197,11 +151,6 @@
 		3FBA91A5235766F600679483 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3FA753682363141100E8EBAB /* Decodable+CoreData.swift */,
-				3FA753602363135E00E8EBAB /* Pokemon+CoreDataClass.swift */,
-				3FA753612363135E00E8EBAB /* Pokemon+CoreDataProperties.swift */,
-				3FA753622363135E00E8EBAB /* Sprites+CoreDataClass.swift */,
-				3FA753632363135E00E8EBAB /* Sprites+CoreDataProperties.swift */,
 				3FBA91A6235766FF00679483 /* Pokemon.swift */,
 				3FBA91B223576BE000679483 /* PokeDownloadError.swift */,
 			);
@@ -211,9 +160,8 @@
 		3FBA91A82357696100679483 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F03B03323612A0600C860A5 /* Unused */,
 				3F3ECFAC2359ED770005EF2A /* PageViewControllers */,
-				3F03B03423612A2300C860A5 /* TabBar */,
+				3FBA918B2357618600679483 /* TestImageViewController.swift */,
 				3FBA91B723576D2F00679483 /* PokemonGalleryViewController.swift */,
 				3FBA91B923576D9500679483 /* PokeImageCollectionViewCell.swift */,
 			);
@@ -291,28 +239,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA753672363135E00E8EBAB /* Sprites+CoreDataProperties.swift in Sources */,
 				3F3ECFAE2359ED8F0005EF2A /* TerrySelectPageViewController.swift in Sources */,
 				3FBA91B323576BE000679483 /* PokeDownloadError.swift in Sources */,
-				3F03B02F2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld in Sources */,
-				3FA753692363141100E8EBAB /* Decodable+CoreData.swift in Sources */,
 				3FBA91B823576D2F00679483 /* PokemonGalleryViewController.swift in Sources */,
 				3FBA91AE23576AF900679483 /* PokemonValidator.swift in Sources */,
 				3F3ECFAB2359E8C70005EF2A /* TerrySelectViewController.swift in Sources */,
 				3FBA919E2357644200679483 /* PokemonServiceViewModelProtocol.swift in Sources */,
-				3F03B0292361221000C860A5 /* CoreDataManager.swift in Sources */,
-				3FA753662363135E00E8EBAB /* Sprites+CoreDataClass.swift in Sources */,
-				3F03B03623612A2300C860A5 /* PokeTabBarController.swift in Sources */,
 				3FBA91B523576C1000679483 /* Utility.swift in Sources */,
-				3FA753652363135E00E8EBAB /* Pokemon+CoreDataProperties.swift in Sources */,
-				3FA753642363135E00E8EBAB /* Pokemon+CoreDataClass.swift in Sources */,
 				3FBA918C2357618600679483 /* TestImageViewController.swift in Sources */,
 				3FBA91A12357658700679483 /* PokemonServiceViewModel.swift in Sources */,
-				3F03B0312361282000C860A5 /* CoreDataManager+Trainer.swift in Sources */,
 				3FBA91B123576B2000679483 /* PokemonServiceProtocol.swift in Sources */,
 				3FBA91AD23576AF900679483 /* PokemonService.swift in Sources */,
 				3FBA91BA23576D9500679483 /* PokeImageCollectionViewCell.swift in Sources */,
-				3FBA91B023576AF900679483 /* ImageFileService.swift in Sources */,
+				3FBA91B023576AF900679483 /* PokemonFileService.swift in Sources */,
 				3FBA918A2357618600679483 /* AppDelegate.swift in Sources */,
 				3F6069D42358BDF8006B2083 /* PokeViewModelFactory.swift in Sources */,
 				3FBA91A7235766FF00679483 /* Pokemon.swift in Sources */,
@@ -513,19 +452,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3F03B02D2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3F03B02E2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodel */,
-			);
-			currentVersion = 3F03B02E2361223B00C860A5 /* TerryCrewsAppModel.xcdatamodel */;
-			path = TerryCrewsAppModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3FBA917E2357618600679483 /* Project object */;
 }

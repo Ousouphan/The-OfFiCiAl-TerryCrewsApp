@@ -18,10 +18,9 @@ class PokeViewModelFactory {
     let session = URLSession(configuration: .default)
     let files = ImageFileService()
     let cache = NSCache<NSString, NSData>()
-    let coreData = CoreDataManager()
     
     lazy var service: PokemonService = {
-       return PokemonService(session, files, cache, coreData)
+       return PokemonService(session, files, cache)
     }()
     
     func buildPokeServiceVM() -> PokemonServiceViewModel {
