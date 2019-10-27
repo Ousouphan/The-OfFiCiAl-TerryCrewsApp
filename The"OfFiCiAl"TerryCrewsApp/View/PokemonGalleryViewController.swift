@@ -14,11 +14,20 @@ class PokemonGalleryViewController: UIViewController {
     
     var vm: PokemonServiceViewModel!
     
+    lazy var catchCounter: UILabel = {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 300, y: 40)
+        label.textAlignment = .center
+        self.view.addSubview(label)
+        return label
+    }()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+        catchCounter.text = "\(vm.catchCount)"
         vm.bind {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -59,6 +68,7 @@ extension PokemonGalleryViewController: UICollectionViewDataSource {
 extension PokemonGalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         vm.caught(at: indexPath.row)
+        catchCounter.text = "\(vm.catchCount)"
     }
 }
 

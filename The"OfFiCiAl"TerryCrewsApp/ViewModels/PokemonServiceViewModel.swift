@@ -20,6 +20,8 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     var count: Int {
         return pokemon.count
     }
+    
+    var catchCount: Int = 0
     var handler: (()->Void)?
     var trainer: Trainer? {
         didSet {
@@ -99,6 +101,7 @@ class PokemonServiceViewModel: PokemonServiceViewModelProtocol {
     }
     
     func caught(at index: Int) {
+        catchCount += 1
         let mon = pokemon[index]
         print("did catch \(mon.name)")
         trainer?.addToPokemon(mon)
