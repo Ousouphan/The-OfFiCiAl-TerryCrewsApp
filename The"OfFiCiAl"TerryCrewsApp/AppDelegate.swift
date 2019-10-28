@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        UITabBar.appearance().backgroundColor = UIColor(red: 1.0,
+                                                            green: 0.0,
+                                                            blue: 0.0,
+                                                            alpha: 1.0)
+        
         // what is my first VC?
         
         self.window = self.window ?? UIWindow(frame: UIScreen.main.bounds)
